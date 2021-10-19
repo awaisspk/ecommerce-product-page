@@ -1,6 +1,10 @@
 import {createStitches} from '@stitches/react';
 import type * as Stitches from '@stitches/react';
 
+const gridGutter = {
+  width: 16,
+};
+
 const StitchesConfig = createStitches({
   theme: {
     colors: {
@@ -185,6 +189,16 @@ const StitchesConfig = createStitches({
     linearGradient: (value: Stitches.PropertyValue<'backgroundImage'>) => ({
       backgroundImage: `linear-gradient(${value})`,
     }),
+    gridCol: (number: number) => {
+      return {
+        flex: `0 0 ${parseFloat(((number / 12) * 100).toFixed(5))}%`,
+        maxWidth: `${parseFloat(((number / 12) * 100).toFixed(5))}%`,
+        position: 'relative',
+        width: '100%',
+        paddingRight: gridGutter.width / 2,
+        paddingLeft: gridGutter.width / 2,
+      };
+    },
   },
 });
 
@@ -201,8 +215,8 @@ export const DarkTheme = StitchesConfig.createTheme({
   },
 });
 
-export const {css, styled, globalCss, keyframes, getCssText} = StitchesConfig;
-export type CSS = Stitches.CSS<typeof StitchesConfig.config>;
+export const {css, styled, globalCss, keyframes, getCssText, config} =
+  StitchesConfig;
 
 // specify layouts in utils
 // brand
