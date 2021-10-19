@@ -2,8 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "src/*": ["src/*"],
-      "components/*": ["src/component/*"]
+      "@src/*": ["src/*"],
+      "@components/*": ["src/component/*"],
+      "@stitchesConfig": ["styles/stitches.config.ts"]
     },
     "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],

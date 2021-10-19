@@ -4,7 +4,17 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link
+            rel="preload"
+            href="/fonts/Inter-latin.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <meta charSet="utf-8" />
+        </Head>
+
         <body>
           <Main />
           <NextScript />
