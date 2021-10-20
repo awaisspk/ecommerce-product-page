@@ -11,7 +11,12 @@ const StyledAvatar = styled('div', {
 export const Avatar = () => {
   return (
     <StyledAvatar>
-      <Image src="/images/image-avatar.png" width="40px" height="40px" />
+      <Image
+        src="/images/image-avatar.png"
+        width="40px"
+        height="40px"
+        alt="User profile image"
+      />
     </StyledAvatar>
   );
 };
