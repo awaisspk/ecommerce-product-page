@@ -1,7 +1,12 @@
+import {Text} from '@components/Text';
+import Link from 'next/link';
+
 export const Logo = () => {
   return (
     <>
-      <h3>Sneaker</h3>
+      <Text as="h1" variant="logo">
+        <Link href="/">Sneaker</Link>
+      </Text>
     </>
   );
 };
