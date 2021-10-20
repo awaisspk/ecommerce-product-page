@@ -5,6 +5,11 @@ export const Text = styled('span', {
   color: '$blue0',
   display: 'inline-block',
 
+  '& a': {
+    color: '$blue0',
+    textDecoration: 'none',
+  },
+
   variants: {
     variant: {
       logo: {
@@ -12,6 +17,7 @@ export const Text = styled('span', {
         color: '$blue0',
         fontWeight: '$900',
         textTransform: 'lowercase',
+        userSelect: 'none',
       },
       title: {
         fontSize: '$5',
