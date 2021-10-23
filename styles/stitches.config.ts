@@ -1,15 +1,11 @@
 import {createStitches} from '@stitches/react';
 import type * as Stitches from '@stitches/react';
 
-const gridGutter = {
-  width: 16,
-};
-
 const StitchesConfig = createStitches({
   theme: {
     colors: {
       brand: 'hsl(26, 100%, 55%)',
-      body: 'hsl(25, 100%, 94%)',
+      body: 'White',
       blue0: 'hsl(220, 13%, 13%)',
       blue1: 'hsl(219, 9%, 45%)',
       blue2: 'hsl(220, 14%, 75%)',
@@ -160,10 +156,11 @@ const StitchesConfig = createStitches({
     dark: '(prefers-color-scheme: dark)',
     light: '(prefers-color-scheme: light)',
     bp1: '(min-width: 30em)',
-    bp2: '(min-width: 48em)',
-    bp3: '(min-width: 62em)',
-    bp4: '(min-width: 80em)',
-    bp5: '(min-width: 95em)',
+    bp2: '(min-width: 40em)',
+    bp3: '(min-width: 48em)',
+    bp4: '(min-width: 62em)',
+    bp5: '(min-width: 80em)',
+    bp6: '(min-width: 95em)',
   },
   prefix: 'ecom',
   utils: {
@@ -189,16 +186,6 @@ const StitchesConfig = createStitches({
     linearGradient: (value: Stitches.PropertyValue<'backgroundImage'>) => ({
       backgroundImage: `linear-gradient(${value})`,
     }),
-    gridCol: (number: number) => {
-      return {
-        flex: `0 0 ${parseFloat(((number / 12) * 100).toFixed(5))}%`,
-        maxWidth: `${parseFloat(((number / 12) * 100).toFixed(5))}%`,
-        position: 'relative',
-        width: '100%',
-        paddingRight: gridGutter.width / 2,
-        paddingLeft: gridGutter.width / 2,
-      };
-    },
   },
 });
 

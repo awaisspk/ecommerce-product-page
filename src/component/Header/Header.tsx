@@ -1,8 +1,8 @@
 import {styled} from '@stitchesConfig';
 import React, {useState} from 'react';
 import {Avatar} from '../Avatar';
+import {Button} from '../Button';
 import {Flex} from '../Flex';
-import {Cart} from '../Icons/Cart';
 import {MenuIcon} from '../Icons/MenuIcon';
 import {Menu} from '../Menu';
 import {HeaderContext} from './HeaderContext';
@@ -28,7 +28,7 @@ export const Header: React.FC = () => {
           <Menu />
         </Flex>
         <Flex gap="4">
-          <Cart />
+          <Button icon="cart" />
           <Avatar />
         </Flex>
       </StyledHeader>

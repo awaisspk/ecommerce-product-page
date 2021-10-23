@@ -1,3 +1,4 @@
+import {getCssText} from '@stitchesConfig';
 import Document, {Html, Head, Main, NextScript} from 'next/document';
 
 class MyDocument extends Document {
@@ -13,6 +14,11 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
           <meta charSet="utf-8" />
+
+          <style
+            id="stitches"
+            dangerouslySetInnerHTML={{__html: getCssText()}}
+          />
         </Head>
 
         <body>

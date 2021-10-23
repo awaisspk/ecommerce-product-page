@@ -1,6 +1,6 @@
 import {styled} from '@stitchesConfig';
 
-export const Text = styled('span', {
+export const Text = styled('p', {
   all: 'unset',
   color: '$blue0',
   display: 'inline-block',
@@ -20,13 +20,13 @@ export const Text = styled('span', {
         userSelect: 'none',
       },
       title: {
-        fontSize: '$5',
+        fontSize: '$6',
         color: '$blue0',
-        fontWeight: '$700',
+        fontWeight: '$900',
         textTransform: 'capitalize',
       },
       para: {
-        fontSize: '$3',
+        fontSize: '$2',
         color: '$blue1',
       },
       emphasis: {
