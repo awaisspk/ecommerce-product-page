@@ -11,9 +11,7 @@ const Home: NextPage = () => {
       <ProductPreview />
       <InfoContainer direction="col" gap="4">
         <Info />
-        <CartContainer>
-          <Cart />
-        </CartContainer>
+        <Cart />
       </InfoContainer>
     </Grid>
   );
@@ -36,5 +34,3 @@ const InfoContainer = styled(Flex, {
   justifySelf: 'end',
   paddingTop: '$6',
 });
-
-const CartContainer = styled('div', {});

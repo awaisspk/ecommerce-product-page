@@ -1,5 +1,6 @@
+import {ProductContext} from '@src/Context/ProductContext';
 import {styled} from '@stitchesConfig';
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {Avatar} from '../Avatar';
 import {Button} from '../Button';
 import {Flex} from '../Flex';
@@ -19,6 +20,8 @@ const StyledHeader = styled(Flex, {
 
 export const Header: React.FC = () => {
   const [isMenuHidden, setIsMenuHidden] = useState(true);
+  const [isCheckout, setIsCheckout] = useState(false);
+  const {product} = useContext(ProductContext);
   return (
     <HeaderContext.Provider value={{isMenuHidden, setIsMenuHidden}}>
       <StyledHeader as="header">
@@ -28,7 +31,8 @@ export const Header: React.FC = () => {
           <Menu />
         </Flex>
         <Flex gap="4">
-          <Button icon="cart" />
+          <Button icon="cart" onClick={() => setIsCheckout(!isCheckout)} />
+          <div>{product.totalItems}</div>
           <Avatar />
         </Flex>
       </StyledHeader>
